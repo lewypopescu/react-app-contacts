@@ -2,15 +2,11 @@ import React from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 
-import {
-  updateName,
-  updateNumber,
-  updateFilter,
-} from "../../redux/contactsSlice";
+import { updateName, updateNumber } from "../../redux/contactsSlice";
 
 import { selectNameForm, selectNumberForm } from "../../redux/selectors";
 
-function ContactsForm({ onSubmit }) {
+export default function ContactsForm({ onSubmit }) {
   const dispatch = useDispatch;
   const name = useSelector(selectNameForm);
   const number = useSelector(selectNumberForm);
@@ -67,5 +63,3 @@ function ContactsForm({ onSubmit }) {
     </>
   );
 }
-
-export default ContactsForm;

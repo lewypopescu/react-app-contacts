@@ -7,5 +7,3 @@ export const store = configureStore({
     contactsSlice: contactsReducer,
   },
 });
-
-export default store;
