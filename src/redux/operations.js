@@ -1,8 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
+import { selectContacts } from "./selectors";
+
 export const fetchContacts = createAsyncThunk(
   "contacts/fetchContacts",
   async (_, thunkApi) => {
+    const state = thunkApi.getState();
+    const contacts = selectContacts(state);
     try {
       return contacts;
     } catch (error) {

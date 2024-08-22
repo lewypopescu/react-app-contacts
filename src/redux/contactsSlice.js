@@ -45,20 +45,24 @@ const contactsSlice = createSlice({
       .addCase(fetchContacts.pending, handlePending)
       .addCase(fetchContacts.rejected, handleRejected)
       .addCase(addContact.fulfilled, (state, action) => {
-        state.items
-          .push(action.payload)
-          .addCase(addContact.pending, handlePending)
-          .addCase(addContact.rejected, handleRejected)
-          .addCase(deleteContact.fulfilled, (state, action) => {
-            const index = state.items.findIndex(
-              (contact) => contact.id === action.payload.id
-            );
-            state.items
-              .splice(index, 1)
-              .addCase(deleteContact.pending, handlePending)
-              .addCase(deleteContact.rejected, handleRejected);
-          });
-      });
+        state.items.push(action.payload);
+        state.isLoading = false;
+        state.error = null;
+      })
+      .addCase(addContact.pending, handlePending)
+      .addCase(addContact.rejected, handleRejected)
+      .addCase(deleteContact.fulfilled, (state, action) => {
+        const index = state.items.findIndex(
+          (contact) => contact.id === action.payload.id
+        );
+        if (index !== -1) {
+          state.items.splice(index, 1);
+        }
+        state.isLoading = false;
+        state.error = null;
+      })
+      .addCase(deleteContact.pending, handlePending)
+      .addCase(deleteContact.rejected, handleRejected);
   },
 });
 

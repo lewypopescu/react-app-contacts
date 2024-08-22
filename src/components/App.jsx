@@ -6,23 +6,22 @@ import ContactsList from "./ContactsList/ContactsList";
 import ContactsFilter from "./ContactsFilter/ContactsFilter";
 
 import { updateFilter } from "../redux/contactsSlice";
-
 import { fetchContacts, addContact, deleteContact } from "../redux/operations";
 
 import {
   selectContacts,
-  selectContactsisLoading,
+  selectContactsIsLoading,
   selectContactsError,
-  selectfilterContacts,
+  selectFilterContacts,
 } from "../redux/selectors";
 
 function App() {
   const contacts = useSelector(selectContacts);
-  const filter = useSelector(selectfilterContacts);
-  const isLoading = useSelector(selectContactsisLoading);
+  const filter = useSelector(selectFilterContacts);
+  const isLoading = useSelector(selectContactsIsLoading);
   const error = useSelector(selectContactsError);
 
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -47,7 +46,7 @@ function App() {
 
   const getFilteredContacts = () => {
     return contacts.filter((contact) =>
-      contact.name.toLowerCase().icludes(filter.toLowerCase())
+      contact.name.toLowerCase().includes(filter.toLowerCase())
     );
   };
 
@@ -64,7 +63,7 @@ function App() {
       <h1>Contacts:</h1>
       <ContactsFilter value={filter} onChange={handleChangeFilter} />
       {isLoading && <p>Loading...</p>}
-      {error && console.log(`${error}`)}
+      {error && <p>{error}</p>}
       {contacts.length === 0 && <p>No contacts available.</p>}
       <ContactsList
         contacts={filteredContacts}

@@ -1,13 +1,11 @@
 import React from "react";
-
 import { useDispatch, useSelector } from "react-redux";
 
 import { updateName, updateNumber } from "../../redux/contactsSlice";
-
 import { selectNameForm, selectNumberForm } from "../../redux/selectors";
 
 export default function ContactsForm({ onSubmit }) {
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
   const name = useSelector(selectNameForm);
   const number = useSelector(selectNumberForm);
 
@@ -20,11 +18,12 @@ export default function ContactsForm({ onSubmit }) {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-
-    if (name === "name") {
-      dispatch(updateName(value));
-    } else if (name === "number") {
-      dispatch(updateNumber(value));
+    const updateFunctions = {
+      name: updateName,
+      number: updateNumber,
+    };
+    if (updateFunctions[name]) {
+      dispatch(updateFunctions[name](value));
     }
   };
 
@@ -38,14 +37,14 @@ export default function ContactsForm({ onSubmit }) {
             id="name"
             type="text"
             name="name"
-            pattern="^[a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?"
+            pattern="^[a-zA-Z]{2,}\s?[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?[a-zA-Z]{1,}$"
             title="Name may contain only letters, apostrophe, dash and spaces"
             required
             value={name}
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label htmlFor="number">
           Phone Number
           <input
             id="number"
