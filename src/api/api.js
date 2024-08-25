@@ -21,7 +21,7 @@ const resourcesApi = (resource) => {
 
 const contactsApi = resourcesApi("contacts");
 
-const usersApi = {
+const userApi = {
   signup: async (data) => {
     const response = await api.post("/users/signup", data);
     setAuthHeader(response.data.token);
@@ -38,4 +38,4 @@ const usersApi = {
   },
 };
 
-export { contactsApi, usersApi };
+export { contactsApi, userApi };

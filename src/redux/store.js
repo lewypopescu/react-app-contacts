@@ -6,6 +6,6 @@ import authReducer from "./authSlice";
 export const store = configureStore({
   reducer: {
     contactsSlice: contactsReducer,
-    authSllice: authReducer,
+    authSlice: authReducer,
   },
 });

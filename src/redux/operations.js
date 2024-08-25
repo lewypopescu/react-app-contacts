@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 // import { selectContacts } from "./selectors";
 
-import { contactsApi, usersApi } from "../api/api";
+import { contactsApi, userApi } from "../api/api";
 
 export const fetchContacts = createAsyncThunk(
   "contacts/fetchContacts",
@@ -46,7 +46,7 @@ export const register = createAsyncThunk(
   "auth/register",
   async (user, thunkApi) => {
     try {
-      const response = await usersApi.signup(user);
+      const response = await userApi.signup(user);
       return response.data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
@@ -56,7 +56,7 @@ export const register = createAsyncThunk(
 
 export const login = createAsyncThunk("auth/login", async (user, thunkApi) => {
   try {
-    const response = await usersApi.login(user);
+    const response = await userApi.login(user);
     return response.data;
   } catch (error) {
     return thunkApi.rejectWithValue(error.message);
@@ -65,7 +65,7 @@ export const login = createAsyncThunk("auth/login", async (user, thunkApi) => {
 
 export const logout = createAsyncThunk("auth/logout", async (_, thunkApi) => {
   try {
-    await usersApi.logout();
+    await userApi.logout();
   } catch (error) {
     return thunkApi.rejectWithValue(error.message);
   }
