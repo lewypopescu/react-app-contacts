@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/react-app-contacts/static/css/main.85415340.css",
-    "main.js": "/react-app-contacts/static/js/main.f1c8ebb2.js",
+    "main.js": "/react-app-contacts/static/js/main.1ba23322.js",
     "static/js/989.23e6639b.chunk.js": "/react-app-contacts/static/js/989.23e6639b.chunk.js",
-    "static/js/274.9f446c5b.chunk.js": "/react-app-contacts/static/js/274.9f446c5b.chunk.js",
-    "static/js/341.55d1a853.chunk.js": "/react-app-contacts/static/js/341.55d1a853.chunk.js",
+    "static/js/274.d5bba9ad.chunk.js": "/react-app-contacts/static/js/274.d5bba9ad.chunk.js",
+    "static/js/341.bf284629.chunk.js": "/react-app-contacts/static/js/341.bf284629.chunk.js",
     "static/js/171.c51a0076.chunk.js": "/react-app-contacts/static/js/171.c51a0076.chunk.js",
     "static/js/599.291e93b7.chunk.js": "/react-app-contacts/static/js/599.291e93b7.chunk.js",
     "index.html": "/react-app-contacts/index.html",
     "main.85415340.css.map": "/react-app-contacts/static/css/main.85415340.css.map",
-    "main.f1c8ebb2.js.map": "/react-app-contacts/static/js/main.f1c8ebb2.js.map",
+    "main.1ba23322.js.map": "/react-app-contacts/static/js/main.1ba23322.js.map",
     "989.23e6639b.chunk.js.map": "/react-app-contacts/static/js/989.23e6639b.chunk.js.map",
-    "274.9f446c5b.chunk.js.map": "/react-app-contacts/static/js/274.9f446c5b.chunk.js.map",
-    "341.55d1a853.chunk.js.map": "/react-app-contacts/static/js/341.55d1a853.chunk.js.map",
+    "274.d5bba9ad.chunk.js.map": "/react-app-contacts/static/js/274.d5bba9ad.chunk.js.map",
+    "341.bf284629.chunk.js.map": "/react-app-contacts/static/js/341.bf284629.chunk.js.map",
     "171.c51a0076.chunk.js.map": "/react-app-contacts/static/js/171.c51a0076.chunk.js.map",
     "599.291e93b7.chunk.js.map": "/react-app-contacts/static/js/599.291e93b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.85415340.css",
-    "static/js/main.f1c8ebb2.js"
+    "static/js/main.1ba23322.js"
   ]
 }
