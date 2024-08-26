@@ -31,6 +31,7 @@ const RegisterForm = () => {
         label="Password"
         placeholder="Enter password"
       />
+      <button type="submit">Register</button>
     </UniversalForm>
   );
 };

@@ -29,6 +29,7 @@ const LoginForm = () => {
         label="Password"
         placeholder="Enter password"
       />
+      <button type="submit">Log in</button>
     </UniversalForm>
   );
 };
