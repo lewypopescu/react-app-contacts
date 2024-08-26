@@ -1,30 +1,11 @@
-const Loader = ({ size, padding }) => {
+const Loader = ({ size = "10", padding = "4" }) => {
   return (
-    <div style={{ padding: padding, textAlign: "center" }}>
+    <div className={`flex justify-center items-center p-${padding}`}>
       <div
-        style={{
-          width: size,
-          height: size,
-          border: "4px solid gray",
-          borderTop: "4px solid blue",
-          borderRadius: "50%",
-          animation: "spin 0.65s linear infinite",
-        }}
-      >
-        {/* Loader simplu */}
-      </div>
+        className={`w-${size} h-${size} border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin`}
+      ></div>
     </div>
   );
 };
-
-// Adaugă un stil simplu pentru animația de rotație folosind CSS in JS
-const style = document.createElement("style");
-style.textContent = `
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-`;
-document.head.append(style);
 
 export default Loader;

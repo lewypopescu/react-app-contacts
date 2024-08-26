@@ -8,13 +8,13 @@ export const instance = axios.create({
 const setAuthHeader = (token) => {
   if (token) {
     instance.defaults.headers.common.authorization = `Bearer ${token}`;
-    localStorage.setItem("authToken", token); // Persist token
+    localStorage.setItem("authToken", token);
   }
 };
 
 const clearAuthHeader = () => {
   instance.defaults.headers.common.authorization = "";
-  localStorage.removeItem("authToken"); // Clear token on logout
+  localStorage.removeItem("authToken");
 };
 
 instance.interceptors.response.use(
@@ -22,8 +22,7 @@ instance.interceptors.response.use(
   (error) => {
     if (error.response.status === 401) {
       clearAuthHeader();
-      // Redirect to login page or show a message
-      window.location.href = "/login"; // Adjust based on your routing
+      window.location.href = "/login";
     }
     return Promise.reject(error);
   }
@@ -34,7 +33,6 @@ export const getAllContacts = async () => {
     const { data } = await instance.get("/contacts");
     return data;
   } catch (error) {
-    // Handle or log error as needed
     throw new Error("Failed to fetch contacts");
   }
 };
@@ -50,7 +48,6 @@ export const deleteContactById = async (id) => {
   return data;
 };
 
-// Authorization
 export const signup = async (credentials) => {
   const { data } = await instance.post("/users/signup", credentials);
   setAuthHeader(data.token);

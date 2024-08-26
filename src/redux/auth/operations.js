@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { currentUser, login, logout, signup } from "../../servicApi/serviceApi";
+import { currentUser, login, logout, signup } from "../../API/serviceApi";
 
 export const register = createAsyncThunk(
   "auth/register",

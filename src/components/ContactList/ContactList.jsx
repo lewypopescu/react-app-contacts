@@ -16,17 +16,22 @@ const ContactList = () => {
   return isLoading && !error ? (
     <Loader />
   ) : (
-    <ul>
+    <ul className="space-y-4">
       {items &&
         contactsList.map((contact) => {
           const { id, name, number } = contact;
           return (
-            <li key={id}>
-              <p>
-                {name}: {number}
-              </p>
+            <li
+              key={id}
+              className="bg-white shadow-md rounded-lg p-4 flex justify-between items-center"
+            >
+              <div>
+                <p className="text-lg font-medium text-gray-800">{name}</p>
+                <p className="text-sm text-gray-600">{number}</p>
+              </div>
               <button
                 type="button"
+                className="text-red-600 hover:text-red-800 transition duration-200"
                 onClick={() => {
                   dispatch(deleteContact(id));
                 }}

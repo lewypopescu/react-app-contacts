@@ -1,21 +1,34 @@
-import { useSelector } from "react-redux";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { selectIsLoggedIn } from "../../redux/auth/selector";
 
 const Navigation = () => {
-  const isLoggedIn = useSelector(selectIsLoggedIn);
-
   return (
-    <nav>
-      <ul>
+    <nav className="bg-blue-600 p-4 shadow-lg">
+      <ul className="flex justify-center space-x-4">
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-bold border-b-2 border-white"
+                : "text-blue-100 hover:text-white"
+            }
+          >
+            Home
+          </NavLink>
         </li>
-        {isLoggedIn && (
-          <li>
-            <NavLink to="/contacts">Contacts</NavLink>
-          </li>
-        )}
+        <li>
+          <NavLink
+            to="/contacts"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-bold border-b-2 border-white"
+                : "text-blue-100 hover:text-white"
+            }
+          >
+            Contacts
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
