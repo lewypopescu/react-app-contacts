@@ -13,7 +13,7 @@ const SharedLayout = () => {
         </Suspense>
       </div>
       <footer className="bg-blue-600 text-white text-center py-2">
-        © 2024 My App
+        © 2024 Contacts Digital App
       </footer>
     </div>
   );
