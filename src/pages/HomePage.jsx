@@ -9,7 +9,7 @@ const HomePage = () => {
             numbers...
             <br />
             <br />
-            <strong>Good luck, and happy reconnecting!</strong>
+            <strong>Good luck, and happy reconnecting!!!!!!!!!!!!!!!!</strong>
           </p>
         </div>
       </div>
