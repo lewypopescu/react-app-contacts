@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-app-contacts/static/css/main.0aeb7298.css",
-    "main.js": "/react-app-contacts/static/js/main.d710bdc7.js",
+    "main.js": "/react-app-contacts/static/js/main.a6978267.js",
     "static/js/989.88fac453.chunk.js": "/react-app-contacts/static/js/989.88fac453.chunk.js",
     "static/js/886.21be09cd.chunk.js": "/react-app-contacts/static/js/886.21be09cd.chunk.js",
     "static/js/341.0b3d4e78.chunk.js": "/react-app-contacts/static/js/341.0b3d4e78.chunk.js",
@@ -9,7 +9,7 @@
     "static/js/599.291e93b7.chunk.js": "/react-app-contacts/static/js/599.291e93b7.chunk.js",
     "index.html": "/react-app-contacts/index.html",
     "main.0aeb7298.css.map": "/react-app-contacts/static/css/main.0aeb7298.css.map",
-    "main.d710bdc7.js.map": "/react-app-contacts/static/js/main.d710bdc7.js.map",
+    "main.a6978267.js.map": "/react-app-contacts/static/js/main.a6978267.js.map",
     "989.88fac453.chunk.js.map": "/react-app-contacts/static/js/989.88fac453.chunk.js.map",
     "886.21be09cd.chunk.js.map": "/react-app-contacts/static/js/886.21be09cd.chunk.js.map",
     "341.0b3d4e78.chunk.js.map": "/react-app-contacts/static/js/341.0b3d4e78.chunk.js.map",
@@ -18,6 +18,6 @@
   },
   "entrypoints": [
     "static/css/main.0aeb7298.css",
-    "static/js/main.d710bdc7.js"
+    "static/js/main.a6978267.js"
   ]
 }
